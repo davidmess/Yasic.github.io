@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/XHTML1-strict.dtd">
+<html>
+<head>
+	<meta http-equiv ="Contet-Type" content="text/html"charset="utf-8">
+	<title>Login System</title>
+	<link rel="shortcut icon" href="shenshi.ico" /> 
+</head>
+<body>
+	<script type="text/javascript">
+	   //验证表格名字是否为空
+	   function validateName(){
+	   	var x=document.forms["Myform"]["name"].value;
+	   	var y=document.forms["Myform"]["password"].value;
+	   	var z=document.forms["Myform"]["email"].value;
+	   	var at=z.indexOf("@");
+        var doc=z.lastIndexOf(".");
+        if (x==null || x==""){
+        	alert("名字必须填写");
+            return false;
+        }
+        if (y==null || y==""){
+        	alert("密码必须填写");
+        	return false;
+        }
+        if (at<1 || dot<at+2 || dot+2>=z.length){
+            alert("输入的邮箱有误");
+            return false;
+        }
+      }  
+ 	  </script>
+	<div id ="top" >
+         Welcome To Login In
+	</div>
+	<div id="main">
+		<h1>Please login in.To search the future</h1>
+	</div>
+	<div id="fill">
+		<h2>Fill out the form and click submit to order</h2>
+		    <form  name="Myform" action="" onsubmit="return validateName()" method="post">
+		    	<table align="center">
+		    	 <tr>
+		    	 	<th>Ship to</th>
+		    	 	<td>
+		    	 		<table>
+		    	 			<tr>
+		    	 				<td>please input your name: </td>
+		    	 				<td>
+		    	 					<input tyoe="text" name="name"  />
+		    	 				</td>
+		    	 			</tr>
+		    	 			<tr>
+		    	 			    <td>please input your password: </td>
+		    	 			    <td>
+		    	 			        <input type="password" name="password" />
+		    	 			    </td>
+		    	 			</tr>
+                            <tr>
+		    	 			    <td>please input your password again: </td>
+		    	 			    <td>
+		    	 			        <input type="password" name="passwordagain " />
+		    	 			    </td>
+		    	 			</tr>
+		    	 			<tr>
+		    	 			    <td>please input your email: </td>
+		    	 			    <td>
+		    	 			        <input type="text" name="email" />
+		    	 			    </td>
+		    	 			</tr>
+		    	 		</table>
+		    	 		<tr>
+		    	 			<td>
+		    	 				<button type="button">Login in Now</button>
+		    	 			</td>
+		    	 		</tr>
+		    	</table>
+		    </form>
+	</div>
+	<div id="foot">Designed by 无名的绅士</div>
+<style type="text/css">
+   body{
+   	background-image: url(background.svg);
+   	background-repeat: no-repeat;
+   	background-position: top left; 
+   	font-family: "微软雅黑";
+   	font-size: small;
+   	margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+   }
+   h1{
+   	text-align: center;
+    font-size: 3em;
+   }
+   #top{
+   	height: 400px;
+   	margin-left: 50px;
+   	margin-top: 50px;
+   	font-size: 3em;
+   }
+   #main{
+   	height:70px;
+   }
+   #fill{
+   	margin:0 auto;
+   	text-align:center;
+   }
+   #foot{
+   	text-align:center;
+   	margin-top: 200px;
+
+   }
+   button{
+    margin:0 auto;
+   	text-align: center;
+   	font-weight:bold;
+    background: transparent url('button.png') no-repeat scroll top right; 
+    display: block;
+    height: 34px;
+    margin-right: 6px;
+    padding-right: 20px;
+    text-decoration: none;
+    color: #000000;
+    font-size:12px
+   }
+   }
+
+</style>
+</body>
+</html>
